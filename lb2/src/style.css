@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background-color: rgb(2 6 23);
+  background-image: linear-gradient(
+    90deg,
+    rgb(2 6 23) 0%,
+    rgb(15 23 42) 25%,
+    rgb(30 41 59) 50%,
+    rgb(15 23 42) 75%,
+    rgb(2 6 23) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+}
